@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puntano Web | Diseño web profesional</title>
+    <meta
+      name="description"
+      content="Páginas web modernas para negocios, profesionales y empresas que quieren aparecer en internet y recibir más consultas."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="constants.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a class="brand" data-link="home" aria-label="Puntano Web inicio">
+          <img class="brand__logo" data-image="logo" alt="Puntano Web" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-panel">
+          <ul class="nav-links" data-render="navLinks"></ul>
+          <a class="nav-whatsapp" data-link="whatsapp" target="_blank" rel="noopener">
+            <span class="icon" data-icon="whatsapp"></span>
+            Hablemos
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-pad" id="inicio">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <span class="eyebrow">Diseño web a medida</span>
+            <h1>Páginas web modernas para negocios que quieren <span class="blue-text">recibir más consultas</span></h1>
+            <p>
+              Diseñamos sitios rápidos, seguros y fáciles de usar. Nos enfocamos en que tu web
+              trabaje para vos, genere confianza y ayude a conseguir más clientes.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" data-link="whatsapp" target="_blank" rel="noopener">
+                <span class="icon" data-icon="whatsapp"></span>
+                Hablemos de tu proyecto
+              </a>
+              <a class="btn btn--secondary" data-link="portfolio">Ver trabajos realizados</a>
+            </div>
+            <div class="trust-row" aria-label="Prueba social">
+              <div class="avatar-stack" data-render="avatars"></div>
+              <div>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+                <p>+40 negocios ya dieron el paso al mundo web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="device-scene">
+              <img class="device-scene__mockup" data-image="heroMockup" alt="Mockup de sitio web en notebook y celular" />
+              <span class="floating-badge floating-badge--one">
+                <span class="badge-icon" data-icon="check"></span>
+                Sitio autoadministrable
+              </span>
+              <span class="floating-badge floating-badge--two">
+                <span class="badge-icon" data-icon="phone"></span>
+                100% responsive
+              </span>
+              <span class="floating-badge floating-badge--three">
+                <span class="badge-icon" data-icon="search"></span>
+                Optimizado para Google y IA
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-web section-pad" aria-labelledby="why-title">
+        <div class="container why-web__grid reveal">
+          <div class="why-web__icon" data-icon="globe"></div>
+          <div>
+            <h2 id="why-title">Hoy, si tu negocio no tiene web, no existe en internet.</h2>
+            <p>
+              Tu sitio web es tu carta de presentación online. Es el lugar donde tus clientes
+              pueden encontrarte, conocerte y confiar en vos antes de escribirte.
+            </p>
+          </div>
+          <div class="why-web__divider" aria-hidden="true"></div>
+          <div>
+            <p>
+              Además, tener una web bien armada ayuda a que Google y las herramientas de
+              Inteligencia Artificial encuentren información clara sobre tu negocio, tus servicios y
+              tu propuesta.
+            </p>
+            <p>Así, más personas te encuentran, te entienden y te eligen.</p>
+          </div>
+          <div class="why-web__icon" data-icon="brain"></div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="servicios">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Nuestros servicios</span>
+            <h2>Tenemos la solución ideal para tu negocio</h2>
+          </div>
+          <div class="card-grid card-grid--four" data-render="services"></div>
+        </div>
+      </section>
+
+      <section class="benefits section-pad" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Tener un sitio web trae beneficios reales</span>
+            <h2 id="benefits-title">¿Por qué tu negocio necesita una web?</h2>
+          </div>
+          <div class="benefit-grid" data-render="benefits"></div>
+        </div>
+      </section>
+
+      <section class="work section-pad" id="trabajos">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Trabajos realizados</span>
+            <h2>Algunos proyectos que creamos</h2>
+          </div>
+          <div class="work-grid" data-render="projects"></div>
+          <div class="center-action reveal">
+            <a class="btn btn--outline" data-link="portfolio">
+              Ver más trabajos
+              <span class="icon" data-icon="arrow"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="process section-pad" id="proceso">
+        <div class="container process__grid">
+          <div class="process__heading reveal">
+            <span class="section-kicker">Cómo trabajamos</span>
+            <h2>Un proceso simple y transparente</h2>
+          </div>
+          <div class="process-steps" data-render="process"></div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contacto">
+        <div class="container final-cta__grid reveal">
+          <div>
+            <h2>¿Listo para que tu negocio dé el siguiente paso?</h2>
+            <p>Hablemos de tu proyecto y llevemos tu presencia online al próximo nivel.</p>
+          </div>
+          <a class="btn btn--light" data-link="whatsapp" target="_blank" rel="noopener">
+            <span class="icon" data-icon="whatsapp"></span>
+            Hablemos por WhatsApp
+          </a>
+          <img class="final-cta__mountain" data-image="mountain" alt="" aria-hidden="true" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" data-image="logo" alt="Puntano Web" />
+          <p data-text="brandSummary"></p>
+          <div class="social-links" data-render="socials"></div>
+        </div>
+        <div>
+          <h3>Navegación</h3>
+          <ul data-render="footerNav"></ul>
+        </div>
+        <div>
+          <h3>Servicios</h3>
+          <ul data-render="footerServices"></ul>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="contact-list" data-render="contact"></ul>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p data-text="copyright"></p>
+        <p>Diseño y desarrollo web a medida</p>
+      </div>
+    </footer>
+  </body>
+</html>
