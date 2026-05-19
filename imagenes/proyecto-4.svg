@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330">
+  <rect width="640" height="330" fill="#004C7F" />
+  <path
+    d="M0 220c74-28 135-30 213-8s127 31 208 3 139-23 219 7v108H0Z"
+    fill="#0077B6"
+    opacity=".7"
+  />
+  <path d="M108 178h360l-48 64H152Z" fill="#FAF6EA" />
+  <path d="M250 82v96h116l-28-72Z" fill="#E8DEC0" />
+  <text x="44" y="76" fill="#ffffff" font-family="Arial, sans-serif" font-size="31" font-weight="800">
+    Siscom Naval
+  </text>
+</svg>

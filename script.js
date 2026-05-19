@@ -11,8 +11,11 @@ const resolveLink = (key) => {
   return SITE_CONFIG.links[key] || "#";
 };
 
-const icon = (name) => ICONS[name] || "";
 const image = (name) => IMAGES[name] || "";
+const icon = (name, extraClass = "") => {
+  const classes = ["ph", `ph-${name}`, extraClass].filter(Boolean).join(" ");
+  return `<i class="${classes}" aria-hidden="true"></i>`;
+};
 
 const setImages = () => {
   qsa("[data-image]").forEach((element) => {
@@ -118,7 +121,7 @@ const renderProjects = () => {
             <p>${project.category}</p>
             <a class="mini-link" href="${project.url}" target="_blank" rel="noopener">
               Ver sitio
-              <span class="icon">${icon("arrow")}</span>
+              <span class="icon">${icon("arrow-right")}</span>
             </a>
           </div>
         </article>
@@ -165,9 +168,9 @@ const renderFooter = () => {
   if (contact) {
     const { phone, email, address } = SITE_CONFIG.contact;
     contact.innerHTML = `
-      <li><a href="${resolveLink("whatsapp")}" target="_blank" rel="noopener"><span class="icon">${icon("whatsapp")}</span>${phone}</a></li>
-      <li><a href="mailto:${email}"><span class="icon">${icon("message")}</span>${email}</a></li>
-      <li><span><span class="icon">${icon("globe")}</span>${address}</span></li>
+      <li><a href="${resolveLink("whatsapp")}" target="_blank" rel="noopener"><span class="icon">${icon("whatsapp-logo")}</span>${phone}</a></li>
+      <li><a href="mailto:${email}"><span class="icon">${icon("envelope-simple")}</span>${email}</a></li>
+      <li><span><span class="icon">${icon("map-pin")}</span>${address}</span></li>
     `;
   }
 };
