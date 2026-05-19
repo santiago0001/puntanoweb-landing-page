@@ -1442,3 +1442,80 @@ h1 {
     filter: none;
   }
 }
+
+.floating-buttons {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.social-float {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.social-float svg {
+  width: 32px;
+  height: 32px;
+}
+
+.social-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-float {
+    width: 58px;
+    height: 58px;
+  }
+
+  .social-float svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .floating-buttons {
+    right: 20px;
+    bottom: 20px;
+  }
+}

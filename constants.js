@@ -6,7 +6,7 @@ const SITE_CONFIG = {
     copyright: "(c) 2026 Puntano Web. Todos los derechos reservados.",
   },
   contact: {
-    whatsappNumber: "5492664880123",
+    whatsappNumber: "5491132595957",
     whatsappMessage:
       "Hola Puntano Web, quiero consultar por una pagina web para mi negocio.",
     email: "satiago@puntanoweb.com",
@@ -134,7 +134,7 @@ const SITE_CONFIG = {
   socials: [
     { label: "Facebook", hrefKey: "facebook", icon: "facebook-logo" },
     { label: "Instagram", hrefKey: "instagram", icon: "instagram-logo" },
-    { label: "LinkedIn", hrefKey: "linkedin", icon: "linkedin-logo" },
+    // { label: "LinkedIn", hrefKey: "linkedin", icon: "linkedin-logo" },
     { label: "WhatsApp", hrefKey: "whatsapp", icon: "whatsapp-logo" },
   ],
 };
