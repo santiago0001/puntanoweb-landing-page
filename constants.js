@@ -140,8 +140,8 @@ const SITE_CONFIG = {
 };
 
 const IMAGES = {
-  logo: "./imagenes/logo-puntanoweb.png",
-  heroMockup: "./imagenes/imagen-portada.webp",
+  logo: "./imagenes/logo.png",
+  heroMockup: "./imagenes/portada.webp",
   mountain: "./imagenes/montanas-footer.png",
   projectConstruction: "./imagenes/cdContrucciones.png",
   projectConsulting: "./imagenes/grfconsultora.png",
