@@ -80,7 +80,7 @@ const renderServices = () => {
   target.innerHTML = SITE_CONFIG.services
     .map(
       (service) => `
-        <article class="service-card reveal">
+        <article class="service-card fade-up">
           <div class="card-icon">${icon(service.icon)}</div>
           <h3>${service.title}</h3>
           <p>${service.text}</p>
@@ -97,7 +97,7 @@ const renderBenefits = () => {
   target.innerHTML = SITE_CONFIG.benefits
     .map(
       (benefit) => `
-        <article class="benefit-item reveal">
+        <article class="benefit-item fade-up">
           <div class="benefit-icon">${icon(benefit.icon)}</div>
           <h3>${benefit.title}</h3>
           <p>${benefit.text}</p>
@@ -114,7 +114,7 @@ const renderProjects = () => {
   target.innerHTML = SITE_CONFIG.projects
     .map(
       (project) => `
-        <article class="work-card reveal">
+        <article class="work-card zoom-in">
           <img src="${image(project.image)}" alt="Vista previa de ${project.name}" loading="lazy" />
           <div class="work-card__body">
             <h3>${project.name}</h3>
@@ -137,7 +137,7 @@ const renderProcess = () => {
   target.innerHTML = SITE_CONFIG.process
     .map(
       (item) => `
-        <article class="process-step reveal">
+        <article class="process-step fade-up">
           <span class="process-number">${item.step}</span>
           <div class="process-icon">${icon(item.icon)}</div>
           <h3>${item.title}</h3>
@@ -203,10 +203,34 @@ const setupMobileNav = () => {
   });
 };
 
+const setupScrollChrome = () => {
+  const header = qs(".site-header");
+  if (!header) return;
+
+  const syncHeader = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 14);
+  };
+
+  syncHeader();
+  window.addEventListener("scroll", syncHeader, { passive: true });
+};
+
+const setupButtonPress = () => {
+  qsa(".btn, .nav-whatsapp, .mini-link").forEach((element) => {
+    const press = () => element.classList.add("is-pressed");
+    const release = () => element.classList.remove("is-pressed");
+
+    element.addEventListener("pointerdown", press);
+    element.addEventListener("pointerup", release);
+    element.addEventListener("pointerleave", release);
+    element.addEventListener("pointercancel", release);
+  });
+};
+
 const setupReveal = () => {
-  const elements = qsa(".reveal");
+  const elements = qsa(".reveal, .fade-up, .fade-left, .fade-right, .zoom-in");
   if (!("IntersectionObserver" in window)) {
-    elements.forEach((element) => element.classList.add("is-visible"));
+    elements.forEach((element) => element.classList.add("visible"));
     return;
   }
 
@@ -214,7 +238,7 @@ const setupReveal = () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          entry.target.classList.add("visible");
           observer.unobserve(entry.target);
         }
       });
@@ -223,6 +247,12 @@ const setupReveal = () => {
   );
 
   elements.forEach((element) => observer.observe(element));
+};
+
+const setupPageLoadMotion = () => {
+  requestAnimationFrame(() => {
+    document.body.classList.add("page-loaded");
+  });
 };
 
 const setupActiveNav = () => {
@@ -265,6 +295,9 @@ const renderPage = () => {
 document.addEventListener("DOMContentLoaded", () => {
   renderPage();
   setupMobileNav();
+  setupScrollChrome();
+  setupButtonPress();
   setupReveal();
   setupActiveNav();
+  setupPageLoadMotion();
 });

@@ -2,15 +2,15 @@ const SITE_CONFIG = {
   brand: {
     name: "Puntano Web",
     summary:
-      "Disenamos paginas web modernas y efectivas para ayudar a tu negocio a crecer.",
+      "Diseñamos paginas web modernas y efectivas para ayudar a tu negocio a crecer.",
     copyright: "(c) 2026 Puntano Web. Todos los derechos reservados.",
   },
   contact: {
     whatsappNumber: "5492664880123",
     whatsappMessage:
       "Hola Puntano Web, quiero consultar por una pagina web para mi negocio.",
-    email: "hola@puntanoweb.com",
-    phone: "+54 9 266 488-0123",
+    email: "satiago@puntanoweb.com",
+    phone: "+54 9 11 3259-5957",
     address: "San Luis, Argentina",
   },
   links: {
@@ -30,13 +30,13 @@ const SITE_CONFIG = {
   footerServices: [
     "Sitios web",
     "SEO y posicionamiento",
-    "Rediseno web",
+    "Rediseño web",
     "Mantenimiento",
   ],
   services: [
     {
       title: "Sitios web a medida",
-      text: "Disenamos paginas unicas, modernas y adaptadas a tus objetivos.",
+      text: "Diseñamos paginas unicas, modernas y adaptadas a tus objetivos.",
       icon: "monitor",
     },
     {
@@ -121,7 +121,7 @@ const SITE_CONFIG = {
     },
     {
       step: "3",
-      title: "Disenamos y desarrollamos tu web",
+      title: "Diseñamos y desarrollamos tu web",
       icon: "pencil-simple",
     },
     {
