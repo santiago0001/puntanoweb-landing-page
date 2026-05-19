@@ -350,6 +350,8 @@ h1 {
   background: linear-gradient(135deg, var(--blue-main), var(--blue-dark));
   color: var(--white);
   box-shadow: 0 14px 36px rgba(10, 43, 107, 0.24);
+  z-index: 100;
+  
 }
 
 .trust-row {
@@ -813,6 +815,7 @@ h1 {
   align-items: center;
   gap: 34px;
   padding: 46px 0;
+  align-items:flex-start;
 }
 
 .final-cta h2 {
