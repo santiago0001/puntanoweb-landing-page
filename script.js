@@ -160,7 +160,10 @@ const renderFooter = () => {
     socials.innerHTML = SITE_CONFIG.socials
       .map((social) => {
         const href = social.hrefKey === "whatsapp" ? resolveLink("whatsapp") : resolveLink(social.hrefKey);
-        return `<a href="${href}" target="_blank" rel="noopener" aria-label="${social.label}">${icon(social.icon)}</a>`;
+        const conversion = social.hrefKey === "whatsapp"
+          ? ' onclick="return gtag_report_conversion(this.href);"'
+          : "";
+        return `<a href="${href}" target="_blank" rel="noopener" aria-label="${social.label}"${conversion}>${icon(social.icon)}</a>`;
       })
       .join("");
   }
@@ -168,7 +171,7 @@ const renderFooter = () => {
   if (contact) {
     const { phone, email, address } = SITE_CONFIG.contact;
     contact.innerHTML = `
-      <li><a href="${resolveLink("whatsapp")}" target="_blank" rel="noopener"><span class="icon">${icon("whatsapp-logo")}</span>${phone}</a></li>
+      <li><a href="${resolveLink("whatsapp")}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);"><span class="icon">${icon("whatsapp-logo")}</span>${phone}</a></li>
       <li><a href="mailto:${email}"><span class="icon">${icon("envelope-simple")}</span>${email}</a></li>
       <li><span><span class="icon">${icon("map-pin")}</span>${address}</span></li>
     `;

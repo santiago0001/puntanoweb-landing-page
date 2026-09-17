@@ -9,6 +9,23 @@
       gtag('js', new Date());
       gtag('config', 'AW-18456314534');
     </script>
+    <!-- Event snippet for Contacto conversion -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18456314534/q-j4CLnivPocEKaF1OBE',
+          'value': 1.0,
+          'currency': 'ARS',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diseño Web Profesional | Puntano Web</title>
@@ -62,6 +79,7 @@
             data-link="whatsapp"
             target="_blank"
             rel="noopener"
+            onclick="return gtag_report_conversion(this.href);"
           >
             <span class="icon" data-icon="whatsapp-logo"></span>
             Hablemos
@@ -89,6 +107,7 @@
                 data-link="whatsapp"
                 target="_blank"
                 rel="noopener"
+                onclick="return gtag_report_conversion(this.href);"
               >
                 <span class="icon" data-icon="whatsapp-logo"></span>
                 Hablemos de tu proyecto
@@ -224,6 +243,7 @@
             data-link="whatsapp"
             target="_blank"
             rel="noopener"
+            onclick="return gtag_report_conversion(this.href);"
           >
             <span class="icon" data-icon="whatsapp-logo"></span>
             Hablemos por WhatsApp
@@ -296,6 +316,7 @@
         class="social-float whatsapp"
         target="_blank"
         aria-label="WhatsApp"
+        onclick="return gtag_report_conversion(this.href);"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
