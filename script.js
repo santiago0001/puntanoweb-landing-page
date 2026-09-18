@@ -112,22 +112,50 @@ const renderProjects = () => {
   if (!target) return;
 
   target.innerHTML = SITE_CONFIG.projects
-    .map(
-      (project) => `
-        <article class="work-card zoom-in">
+    .map((project) => {
+      const hasUrl = project.url && project.url !== "#";
+      const actionAttributes = hasUrl
+        ? `href="${project.url}" target="_blank" rel="noopener"`
+        : 'href="#" aria-disabled="true" tabindex="-1"';
+
+      return `
+        <article class="work-card zoom-in" data-category="${project.category}">
           <img src="${image(project.image)}" alt="Vista previa de ${project.name}" loading="lazy" />
           <div class="work-card__body">
             <h3>${project.name}</h3>
-            <p>${project.category}</p>
-            <a class="mini-link" href="${project.url}" target="_blank" rel="noopener">
-              Ver sitio
-              <span class="icon">${icon("arrow-right")}</span>
-            </a>
+            <p>${project.description}</p>
+            <div class="work-tags">
+              ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
+            </div>
+            <div class="work-card__actions">
+              <a class="work-action work-action--primary is-disabled" href="#" aria-disabled="true" tabindex="-1">
+                ${icon("play-fill")} Ver demo
+              </a>
+              <a class="work-action work-action--secondary${hasUrl ? "" : " is-disabled"}" ${actionAttributes}>
+                ${icon("arrow-up-right")} Visitar sitio
+              </a>
+            </div>
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
+};
+
+const setupProjectFilters = () => {
+  const buttons = qsa(".work-filters button");
+  const cards = qsa(".work-card");
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      cards.forEach((card) => {
+        card.hidden = filter !== "all" && card.dataset.category !== filter;
+      });
+    });
+  });
 };
 
 const renderProcess = () => {
@@ -141,6 +169,7 @@ const renderProcess = () => {
           <span class="process-number">${item.step}</span>
           <div class="process-icon">${icon(item.icon)}</div>
           <h3>${item.title}</h3>
+          <p>${item.text}</p>
         </article>
       `
     )
@@ -302,5 +331,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupButtonPress();
   setupReveal();
   setupActiveNav();
+  setupProjectFilters();
   setupPageLoadMotion();
 });
