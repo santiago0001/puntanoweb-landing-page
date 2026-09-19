@@ -78,15 +78,27 @@ const renderServices = () => {
   if (!target) return;
 
   target.innerHTML = SITE_CONFIG.services
-    .map(
-      (service) => `
-        <article class="service-card fade-up">
-          <div class="card-icon">${icon(service.icon)}</div>
-          <h3>${service.title}</h3>
-          <p>${service.text}</p>
+    .map((service, index) => {
+      const message = `Hola Puntano Web, quiero conocer más sobre el servicio de ${service.title}.`;
+      const serviceWhatsapp = `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      return `
+        <article class="service-card service-card--${index + 1} fade-up">
+          <div class="service-card__content">
+            <span class="service-card__number">${String(index + 1).padStart(2, "0")}</span>
+            <h3>${service.title}</h3>
+            <p>${service.text}</p>
+            <a class="service-card__link" href="${serviceWhatsapp}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);">
+              Conocer más
+              <span>${icon("arrow-right")}</span>
+            </a>
+          </div>
+          <div class="service-card__visual">
+            <img src="${image(service.image)}" alt="${service.title}" loading="lazy" decoding="async" />
+          </div>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
 };
 
@@ -96,11 +108,16 @@ const renderBenefits = () => {
 
   target.innerHTML = SITE_CONFIG.benefits
     .map(
-      (benefit) => `
+      (benefit, index) => `
         <article class="benefit-item fade-up">
-          <div class="benefit-icon">${icon(benefit.icon)}</div>
+          <span class="benefit-number">${String(index + 1).padStart(2, "0")}</span>
+          <img class="benefit-image" src="${image(benefit.image)}" alt="" loading="lazy" decoding="async" />
           <h3>${benefit.title}</h3>
           <p>${benefit.text}</p>
+          <div class="benefit-highlight">
+            ${icon(benefit.highlightIcon)}
+            <span>${benefit.highlight}</span>
+          </div>
         </article>
       `
     )
@@ -167,9 +184,13 @@ const renderProcess = () => {
       (item) => `
         <article class="process-step fade-up">
           <span class="process-number">${item.step}</span>
-          <div class="process-icon">${icon(item.icon)}</div>
+          <img class="process-image" src="${image(item.image)}" alt="" loading="lazy" decoding="async" />
           <h3>${item.title}</h3>
           <p>${item.text}</p>
+          <div class="process-highlight">
+            ${icon(item.highlightIcon)}
+            <span>${item.highlight}</span>
+          </div>
         </article>
       `
     )

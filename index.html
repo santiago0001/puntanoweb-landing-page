@@ -42,9 +42,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
-    <link rel="stylesheet" href="styles.css?v=20260918-3" />
-    <script src="constants.js?v=20260918-3" defer></script>
-    <script src="script.js?v=20260918-3" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260919-7" />
+    <script src="constants.js?v=20260919-7" defer></script>
+    <script src="script.js?v=20260919-7" defer></script>
   </head>
   <body alt="V1">
     <header class="site-header" id="top">
@@ -203,11 +203,6 @@
             </div>
           </div>
 
-          <a class="about__cta fade-up" data-link="whatsapp" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);">
-            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
-            <span>Hablemos de tu proyecto</span>
-            <i class="ph ph-arrow-right" aria-hidden="true"></i>
-          </a>
         </div>
       </section>
 
@@ -216,7 +211,10 @@
           <div class="section-heading fade-up">
             <span class="section-kicker">Nuestros servicios</span>
             <h2>Todo lo que necesitás para<br /><span>hacer crecer tu negocio</span></h2>
-            <p>Un servicio integral para que te enfoques en lo más importante: tu negocio.</p>
+            <p>
+              Un servicio integral para que te enfoques en lo más importante: tu negocio.<br />
+              Nos encargamos de la tecnología, el diseño y la estrategia digital.
+            </p>
           </div>
           <div class="card-grid card-grid--four" data-render="services"></div>
         </div>
@@ -225,12 +223,26 @@
       <section class="benefits section-pad" aria-labelledby="benefits-title">
         <div class="container">
           <div class="section-heading fade-up">
-            <span class="section-kicker"
-              >Tener un sitio web trae beneficios reales</span
-            >
-            <h2 id="benefits-title">Por que tu negocio necesita una web?</h2>
+            <span class="section-kicker">Más que una página, una oportunidad real para tu negocio</span>
+            <h2 id="benefits-title">¿Por qué tu negocio <span>necesita una web?</span></h2>
+            <p>Hoy tus clientes buscan en internet, comparan y eligen. Tener un sitio web te permite estar presente, generar confianza y hacer crecer tu negocio.</p>
           </div>
           <div class="benefit-grid" data-render="benefits"></div>
+          <div class="benefits-cta fade-up">
+            <div class="benefits-cta__message">
+              <i class="ph ph-chart-bar" aria-hidden="true"></i>
+              <p>Tu negocio tiene <strong>mucho potencial.</strong><br />Una web te ayuda a hacerlo realidad.</p>
+            </div>
+            <div class="benefits-cta__action">
+              <a data-link="whatsapp" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);">
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+                Hablemos de tu proyecto
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+              <small>Sin compromiso. Te asesoramos en todo el proceso.</small>
+            </div>
+            <p class="benefits-cta__note">Tu crecimiento<br />también empieza online</p>
+          </div>
         </div>
       </section>
 
@@ -255,38 +267,58 @@
           <div class="process__heading fade-left">
             <span class="section-kicker">Cómo trabajamos</span>
             <h2>Un proceso simple y <span>transparente</span></h2>
+            <p>Te acompañamos en cada etapa, desde la idea hasta los resultados.</p>
           </div>
           <div class="process-steps" data-render="process"></div>
         </div>
       </section>
 
       <section class="final-cta" id="contacto">
+        <img class="final-cta__photo" data-image="finalPhoto" alt="Santiago de Puntano Web trabajando en su oficina" loading="lazy" decoding="async" />
         <div class="container final-cta__grid fade-up">
-          <div>
-            <h2>Listo para que tu negocio de el siguiente paso?</h2>
-            <p>
-              Hablemos de tu proyecto y llevemos tu presencia online al proximo
-              nivel.
-            </p>
+          <div class="final-cta__content">
+            <span class="final-cta__kicker">Tu proyecto, en buenas manos</span>
+            <h2>¿Listo para hacer crecer<br />tu <span>negocio?</span></h2>
+            <p>Contame tu idea y te asesoro sin compromiso. Juntos podemos llevar tu presencia online al siguiente nivel.</p>
+
+            <div class="final-cta__benefits">
+              <article>
+                <i class="ph ph-chat-circle-dots" aria-hidden="true"></i>
+                <h3>Asesoramiento personalizado</h3>
+                <p>Hablamos de tus objetivos</p>
+              </article>
+              <article>
+                <i class="ph ph-rocket-launch" aria-hidden="true"></i>
+                <h3>Soluciones a medida</h3>
+                <p>Diseño y desarrollo pensado para tu negocio</p>
+              </article>
+              <article>
+                <i class="ph ph-chart-bar" aria-hidden="true"></i>
+                <h3>Resultados reales</h3>
+                <p>Más visibilidad, más clientes, más oportunidades</p>
+              </article>
+            </div>
+
+            <div class="final-cta__identity">
+              <img data-image="signature" alt="Firma de Santiago" loading="lazy" decoding="async" />
+              <span>Tu aliado digital<br />en San Luis y todo el país</span>
+            </div>
           </div>
+
+          <div class="final-cta__action">
+            <span>Hablemos<br />de tu proyecto</span>
           <a
-            class="btn btn--light"
+            class="final-cta__button"
             data-link="whatsapp"
             target="_blank"
             rel="noopener"
             onclick="return gtag_report_conversion(this.href);"
           >
-            <span class="icon" data-icon="whatsapp-logo"></span>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Hablemos por WhatsApp
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
           </a>
-          <img
-            class="final-cta__mountain"
-            data-image="mountain"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-          />
+          </div>
         </div>
       </section>
     </main>
