@@ -42,9 +42,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
-    <link rel="stylesheet" href="styles.css?v=20260918-1" />
-    <script src="constants.js?v=20260918-1" defer></script>
-    <script src="script.js?v=20260918-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260918-3" />
+    <script src="constants.js?v=20260918-3" defer></script>
+    <script src="script.js?v=20260918-3" defer></script>
   </head>
   <body alt="V1">
     <header class="site-header" id="top">
@@ -146,29 +146,68 @@
         </div>
       </section>
 
-      <section class="why-web section-pad" id="nosotros" aria-labelledby="why-title">
-        <div class="container why-web__grid fade-up">
-          <div class="why-web__icon" data-icon="globe"></div>
-          <div>
-            <h2 id="why-title">
-              Hoy, si tu negocio no tiene web, no existe en internet.
-            </h2>
-            <p>
-              Tu sitio web es tu carta de presentacion online. Es el lugar donde
-              tus clientes pueden encontrarte, conocerte y confiar en vos antes
-              de escribirte.
-            </p>
+      <section class="about section-pad" id="sobre-mi" aria-labelledby="about-title">
+        <div class="container about__layout">
+          <div class="about__content fade-left">
+            <span class="about__kicker">Sobre mí</span>
+            <h2 id="about-title">Hola, soy <span>Santiago</span></h2>
+            <p class="about__lead">La persona detrás de PuntanoWeb</p>
+            <div class="about__copy">
+              <p>
+                Soy <strong>desarrollador web</strong> y me apasiona ayudar a negocios y
+                emprendedores a crecer en internet.
+              </p>
+              <p>
+                Creo en el trabajo cercano, la comunicación clara y en soluciones que realmente
+                generen resultados. Cada proyecto lo tomo como propio, combinando
+                <strong>diseño, tecnología y estrategia</strong> para que tu web no solo se vea
+                bien, sino que también te traiga más clientes.
+              </p>
+              <p>
+                Mi objetivo es simple: que tu negocio tenga una
+                <strong>presencia online profesional, moderna y efectiva.</strong>
+              </p>
+            </div>
           </div>
-          <div class="why-web__divider" aria-hidden="true"></div>
-          <div>
-            <p>
-              Ademas, tener una web bien armada ayuda a que Google y las
-              herramientas de Inteligencia Artificial encuentren informacion
-              clara sobre tu negocio, tus servicios y tu propuesta.
-            </p>
-            <p>Asi, mas personas te encuentran, te entienden y te eligen.</p>
+
+          <div class="about__photo-wrap fade-right">
+            <span class="about__annotation">Tu aliado<br />digital</span>
+            <img class="about__photo" data-image="aboutPhoto" alt="Santiago, creador de Puntano Web" loading="lazy" decoding="async" />
           </div>
-          <div class="why-web__icon" data-icon="brain"></div>
+
+          <div class="about__services fade-up" aria-label="Áreas de trabajo">
+            <article>
+              <span><i class="ph ph-laptop" aria-hidden="true"></i></span>
+              <h3>Desarrollo web</h3>
+              <p>Sitios a medida,<br />rápidos y modernos</p>
+            </article>
+            <article>
+              <span><i class="ph ph-users-three" aria-hidden="true"></i></span>
+              <h3>Acompañamiento</h3>
+              <p>Atención personalizada<br />en todo el proceso</p>
+            </article>
+          </div>
+
+          <blockquote class="about__quote fade-up">
+            <span class="about__quote-mark">“</span>
+            <p>Me motiva ver cómo una buena web puede abrir nuevas oportunidades y hacer crecer un negocio.</p>
+            <img data-image="signature" alt="Firma de Santiago" loading="lazy" decoding="async" />
+          </blockquote>
+
+          <div class="about__commitment fade-up">
+            <div class="about__commitment-icon"><i class="ph ph-target" aria-hidden="true"></i></div>
+            <div>
+              <span>Mi compromiso</span>
+              <h3>Tu éxito también es el mío</h3>
+              <p>Estoy para ayudarte a hacer realidad tus ideas y llevar tu negocio al siguiente nivel.</p>
+            </div>
+          </div>
+
+          <a class="about__cta fade-up" data-link="whatsapp" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            <span>Hablemos de tu proyecto</span>
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
       </section>
 

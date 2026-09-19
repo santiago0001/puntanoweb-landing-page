@@ -24,7 +24,7 @@ const SITE_CONFIG = {
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
     { label: "Trabajos", href: "#trabajos" },
-    { label: "Nosotros", href: "#nosotros" },
+    { label: "Sobre mí", href: "#sobre-mi" },
     { label: "Contacto", href: "#contacto" },
   ],
   footerServices: [
@@ -214,6 +214,8 @@ const SITE_CONFIG = {
 const IMAGES = {
   logo: "./imagenes/logo.png",
   heroMockup: "./imagenes/portada.webp",
+  aboutPhoto: "./imagenes/yo.webp",
+  signature: "./imagenes/firma-santiago.png",
   mountain: "./imagenes/montanas-footer.png",
   projectConstruction: "./imagenes/trabajos/cd construcciones.webp",
   projectPeralta: "./imagenes/trabajos/consultora peralta.webp",
