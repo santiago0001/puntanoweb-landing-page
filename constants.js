@@ -9,7 +9,7 @@ const SITE_CONFIG = {
     whatsappNumber: "5491132595957",
     whatsappMessage:
       "Hola Puntano Web, quiero consultar por una pagina web para mi negocio.",
-    email: "satiago@puntanoweb.com",
+    email: "santiago@puntanoweb.com",
     phone: "+54 9 11 3259-5957",
     address: "San Luis, Argentina",
   },
@@ -115,7 +115,8 @@ const SITE_CONFIG = {
   projects: [
     {
       name: "Pinto Dronear",
-      description: "Landing page para servicios audiovisuales y filmaciones profesionales con drones.",
+      description:
+        "Landing page para servicios audiovisuales y filmaciones profesionales con drones.",
       category: "landing",
       tags: ["Landing Page", "Portfolio", "Responsive", "WhatsApp"],
       image: "projectPinto",
@@ -123,7 +124,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Todo Gas y Plomería",
-      description: "Sitio orientado a generar consultas para servicios de gas y plomería.",
+      description:
+        "Sitio orientado a generar consultas para servicios de gas y plomería.",
       category: "landing",
       tags: ["Landing Page", "Servicios", "WhatsApp", "SEO"],
       image: "projectGas",
@@ -131,7 +133,8 @@ const SITE_CONFIG = {
     },
     {
       name: "CD Construcciones",
-      description: "Sitio web profesional para una empresa constructora con amplia trayectoria.",
+      description:
+        "Sitio web profesional para una empresa constructora con amplia trayectoria.",
       category: "landing",
       tags: ["Landing Page", "Construcción", "Responsive", "WhatsApp"],
       image: "projectConstruction",
@@ -139,7 +142,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Consultora Peralta",
-      description: "Sitio profesional enfocado en seguridad, higiene y gestión ambiental.",
+      description:
+        "Sitio profesional enfocado en seguridad, higiene y gestión ambiental.",
       category: "landing",
       tags: ["Landing Page", "Profesional", "SEO", "WhatsApp"],
       image: "projectPeralta",
@@ -147,7 +151,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Nortel Automatizaciones",
-      description: "Sitio comercial para automatización, seguridad y control de accesos.",
+      description:
+        "Sitio comercial para automatización, seguridad y control de accesos.",
       category: "complete",
       tags: ["Página completa", "Servicios", "WhatsApp", "SEO"],
       image: "projectNortel",
@@ -155,7 +160,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Indunova",
-      description: "Sitio institucional para servicios industriales y navales especializados.",
+      description:
+        "Sitio institucional para servicios industriales y navales especializados.",
       category: "complete",
       tags: ["Página completa", "Industria", "SEO", "Responsive"],
       image: "projectIndunova",
@@ -163,7 +169,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Geo Domos",
-      description: "Web visual para presentar modelos, experiencias de glamping y eventos.",
+      description:
+        "Web visual para presentar modelos, experiencias de glamping y eventos.",
       category: "complete",
       tags: ["Página completa", "Catálogo", "Responsive", "WhatsApp"],
       image: "projectGeodomos",
@@ -171,7 +178,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Siscom Naval",
-      description: "Sitio corporativo para soluciones de navegación y comunicaciones navales.",
+      description:
+        "Sitio corporativo para soluciones de navegación y comunicaciones navales.",
       category: "complete",
       tags: ["Página completa", "Naval", "Responsive", "WhatsApp"],
       image: "projectSiscom",
@@ -179,7 +187,8 @@ const SITE_CONFIG = {
     },
     {
       name: "Automotores Benavidez",
-      description: "Sitio comercial para exhibir vehículos y generar nuevas consultas.",
+      description:
+        "Sitio comercial para exhibir vehículos y generar nuevas consultas.",
       category: "complete",
       tags: ["Página completa", "Automotores", "Catálogo", "WhatsApp"],
       image: "projectAutomotores",
