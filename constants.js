@@ -8,7 +8,7 @@ const SITE_CONFIG = {
   contact: {
     whatsappNumber: "5491132595957",
     whatsappMessage:
-      "Hola Puntano Web, quiero consultar por una pagina web para mi negocio.",
+      "Hola Puntano Web, me contacto desde la web y quiero desarrollar mi sitio web.",
     email: "santiago@puntanoweb.com",
     phone: "+54 9 11 3259-5957",
     address: "San Luis, Argentina",
